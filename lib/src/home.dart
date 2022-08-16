@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/src/projects.dart';
 import 'package:portfolio/src/skills.dart';
 import 'package:typewritertext/typewritertext.dart';
 
@@ -53,6 +54,11 @@ class Home extends StatelessWidget {
               delegate: SliverChildBuilderDelegate((_, int i) {
             return Column(children: const [
               Skills(),
+              SizedBox(height: 10),
+              Projects(),
+              SizedBox(height: 100),
+              Text('flutter web portfolio'),
+              SizedBox(height: 10),
             ]);
           }, childCount: 1))
         ],

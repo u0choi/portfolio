@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/src/components/hover_btn.dart';
 import 'package:show_up_animation/show_up_animation.dart';
-
 import 'package:iconify_flutter/iconify_flutter.dart';
 import 'package:colorful_iconify_flutter/icons/vscode_icons.dart';
-
 import 'components/title.dart';
 
 class Skills extends StatelessWidget {
@@ -31,7 +29,7 @@ class Skills extends StatelessWidget {
             const SizedBox(width: 5),
             Text(
               text,
-              style: const TextStyle(fontWeight: FontWeight.w500),
+              style: const TextStyle(fontWeight: FontWeight.w600),
             ),
           ],
         ),
@@ -42,7 +40,7 @@ class Skills extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 400,
+      height: 300,
       // alignment: Alignment.center,
       child: Column(
           // crossAxisAlignment: CrossAxisAlignment.center,
@@ -53,8 +51,8 @@ class Skills extends StatelessWidget {
             Wrap(
               children: [
                 ShowUpAnimation(
-                    delayStart: const Duration(milliseconds: 500),
-                    animationDuration: const Duration(milliseconds: 500),
+                    delayStart: const Duration(milliseconds: 250),
+                    animationDuration: const Duration(milliseconds: 250),
                     curve: Curves.bounceIn,
                     direction: Direction.vertical,
                     offset: 0.5,
@@ -63,6 +61,14 @@ class Skills extends StatelessWidget {
                           VscodeIcons.file_type_flutter,
                         ),
                         'Flutter')),
+                ShowUpAnimation(
+                    delayStart: const Duration(milliseconds: 500),
+                    animationDuration: const Duration(milliseconds: 500),
+                    curve: Curves.bounceIn,
+                    direction: Direction.vertical,
+                    offset: 0.5,
+                    child: _skillItem(
+                        const Iconify(VscodeIcons.file_type_reactjs), 'React')),
                 ShowUpAnimation(
                     delayStart: Duration(seconds: 1),
                     animationDuration: Duration(seconds: 1),
